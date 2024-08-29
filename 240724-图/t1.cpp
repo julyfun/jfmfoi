@@ -2,7 +2,7 @@
 using namespace std;
 int n, m;
 int e[110][110];
-int main() { 
+int main() {
     cin >> n >> m;
     memset(e, -1, sizeof(e));
     while (m--) {
