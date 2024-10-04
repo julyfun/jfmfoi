@@ -16,14 +16,13 @@ void dfs(int u, int fa) {
         dfs(v, u);
     }
 }
-
 int lca(int x, int y) {
     if (dep[x] < dep[y]) {
         swap(x, y);
     }
     // 一定要从大到小枚举 t 才能减干净
     for (int t = 20; t >= 0; --t) {
-//        printf("%d\n", t);
+        //        printf("%d\n", t);
         if (dep[x] - dep[y] >= (1 << t)) {
             x = f[x][t];
         }
@@ -45,7 +44,7 @@ int lca(int x, int y) {
 int main() {
     scanf("%d%d%d", &n, &m, &s);
     for (int i = 1; i <= n - 1; i++) {
-        int u, v; 
+        int u, v;
         scanf("%d %d", &u, &v);
         e[u].push_back(v);
         e[v].push_back(u);
@@ -61,8 +60,6 @@ int main() {
         scanf("%d %d", &x, &y);
         printf("%d\n", lca(x, y));
     }
-
-
 
     return 0;
 }
