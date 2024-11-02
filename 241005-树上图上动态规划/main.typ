@@ -27,7 +27,7 @@
 // Global information configuration
 #let s = (s.methods.info)(
   self: s,
-  title: [区间 DP 和环状 DP],
+  title: [树上和图上 DP],
   subtitle: [],
   author: [方俊杰.SJTU],
   date: datetime.today(),
