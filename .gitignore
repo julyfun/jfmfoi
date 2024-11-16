@@ -6,4 +6,5 @@
 1
 *.pdf
 *.zip
-
+*.o
+build
