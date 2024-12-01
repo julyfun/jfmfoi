@@ -18,12 +18,6 @@ void build(int k, int l, int r) {
     lazy[k] = 0;
 }
 
-void add(int k, int l, int r, ll x) {
-    // 对 k 号结点进行区间加
-    sum[k] += (r - l + 1) * x;
-    lazy[k] += x;
-}
-
 void pushdown(int k, int l, int r) {
     // k 号结点的懒惰标记往下加
     int mid = (l + r) / 2;
@@ -40,7 +34,8 @@ void modify(int k, int l, int r, int x, int y, ll t) {
         return;
     }
     if (x <= l && r <= y) {
-        add(k, l, r, t);
+        sum[k] += (r - l + 1) * x;
+        lazy[k] += x;
         return;
     }
     pushdown(k, l, r);
