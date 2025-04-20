@@ -35,11 +35,10 @@
   ),
 )
 
+// [my]
 #show heading.where(level: 1): set heading(numbering: numbly("{1}.", default: "1.1"))
 
-// [my]
-
-// [code]
+// [my.code]
 #show raw.where(lang: "cpp"): it => {
   set text(12pt)
   it
