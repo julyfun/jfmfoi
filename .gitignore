@@ -9,3 +9,4 @@
 *.o
 build
 *.rar
+ignoreme-*
